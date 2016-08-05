@@ -1,0 +1,117 @@
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 736px) {
+
+  .qor-layout .mdl-layout__content{
+    padding-top: 0 !important;
+  }
+
+  .qor-table{
+    margin: 0;
+    .is-fixed{
+      display: none;
+    }
+  }
+  .qor-section{
+    margin: 24px 0;
+    .qor-section__header{
+      margin-left: 24px;
+    }
+  }
+  .qor-page--dashboard .qor-table-container{
+    @include shadow-2dp();
+    th{
+      background-color: transparent;
+    }
+  }
+  .qor-table-container{
+    margin: 0 0 24px 0;
+    th{
+      background-color: #f5f5f5;
+    }
+    .mdl-data-table{
+      border-top: 0;
+    }
+  }
+  .qor-action--select + .qor-selector, .qor-action--select + .qor-action--label, .qor-action--select + .qor-action--select{
+    margin-left: 0;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .mdl-textfield.is-dirty .mdl-textfield__expandable-holder, .mdl-textfield.is-focused .mdl-textfield__expandable-holder{
+    max-width: 100px;
+  }
+
+  .qor-search{
+    height: 56px !important;
+    line-height: 56px !important;
+    .qor-search__label{
+      top: 13px !important;
+    }
+    &.is-focused{
+      background-color: #0277bd;
+      position: absolute;
+      left: 54px;
+      top: 0;
+      right: 8px;
+    }
+    .mdl-textfield__expandable-holder{
+      width: calc(100% - 64px);
+    }
+  }
+  .qor-modal .mdl-card{
+    margin: 24px auto;
+  }
+  .qor-form-container{
+    margin: 0;
+    padding: 16px;
+  }
+
+  .qor-page__header+.qor-page__body{
+    padding-top: 8px;
+  }
+
+  /* Header */
+
+  header{
+    .qor-mobile--show-actions{
+      display: none;
+    }
+    .mdl-layout__header-row{
+      padding-left: 56px;
+      .qor-mobile--show-actions{
+        color: #fff;
+      }
+    }
+    .mdl-layout-title, .mdl-layout__title{
+      font-size: 16px;
+    }
+
+    &.has-action{
+      .qor-mobile--show-actions{
+        display: inline-block;
+      }
+    }
+    &.has-search{
+      .qor-mobile--show-actions{
+        margin-right: 16px;
+      }
+    }
+
+  }
+  .qor-page__header{
+    min-height: 0;
+    background: transparent;
+    margin-bottom: 2px;
+    & > div{
+      display: none;
+    }
+    &.actions-show{
+      background: #fff;
+      & > div{
+        display: block;
+      }
+    }
+  }
+}

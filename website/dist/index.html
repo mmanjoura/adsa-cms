@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Boho-Wall</title>
+<meta name="keywords" content="HTML5 Template" />
+<meta name="description" content="WellDone - Responsive HTML5 Template">
+<meta name="author" content="etheme.com">
+<link rel="shortcut icon" href="favicon.ico">
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Web Fonts  -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+<!-- Icon Fonts  -->
+<link rel="stylesheet" href="font/style.css">
+<!-- Vendor CSS -->
+<link rel="stylesheet" href="vendor/waves/waves.css">
+<link rel="stylesheet" href="vendor/slick/slick.css">
+<link rel="stylesheet" href="vendor/slick/slick-theme.css">
+<link rel="stylesheet" href="vendor/bootstrap-select/bootstrap-select.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style-colors.css">
+<link rel="stylesheet" href="css/style-layout1.css">
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="vendor/rs-plugin/css/settings.css" media="screen" />
+<!-- Head Libs -->
+
+<!--[if IE]>
+        <link rel="stylesheet" href="css/ie.css">
+        <![endif]-->
+<!--[if lte IE 8]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <![endif]-->
+
+<!-- Modernizr -->
+<script src="vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+<!-- loader wrapper -->
+<div id="loader-wrapper">
+  <div id="loader"></div>
+</div>
+<!-- End loader wrapper -->
+<!-- Modal Search -->
+<div class="overlay overlay-scale">
+  <button type="button" class="overlay-close"> ✕ </button>
+  <div class="overlay__content">
+    <form id="search-form" class="search-form outer" action="#" method="post">
+      <div class="input-group input-group--wd">
+        <input type="text" class=" input--full" placeholder="search text here ...">
+        <span class="input-group__bar"></span> </div>
+      <button class="btn btn--wd text-uppercase wave waves-effect">Search</button>
+    </form>
+  </div>
+</div>
+<!-- / end Modal Search -->
+
+
+  <!-- Header section -->
+
+
+  <!-- End Header section -->
+
+<div id="app"></div>
+
+
+
+
+<div class="modal fade bs-example-modal-sm" role="dialog" id="modalAddToCart">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <button type="button" class="close icon-clear" data-dismiss="modal"></button>
+      <div class="text-center">
+        <div class="divider divider--xs"></div>
+        <p>Product added to cart successfully! </p>
+        <div class="divider divider--xs"></div>
+        <a href="#" class="btn btn--wd">Go to Cart</a>
+        <div class="divider divider--xs"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade bs-example-modal-sm" role="dialog" id="modalAddToWishlist">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <button type="button" class="close icon-clear" data-dismiss="modal"></button>
+      <div class="text-center">
+        <div class="divider divider--xs"></div>
+        <div class="loading">
+          <div class="divider divider--sm"></div>
+          <div class="loader">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+        <p class="success">Product added to wishlist successfully! </p>
+        <div class="divider divider--xs"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Vendor -->
+<script src="bundle.js"></script>
+<!-- jQuery 1.10.1-->
+<script src="vendor/jquery/jquery.js"></script>
+<!-- Bootstrap 3-->
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<!-- Specific Page Vendor -->
+<script src="vendor/waves/waves.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="vendor/parallax/jquery.parallax-1.1.3.js"></script>
+<script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="vendor/waypoints/sticky.min.js"></script>
+<script src="vendor/doubletaptogo/doubletaptogo.js"></script>
+<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="vendor/countdown/jquery.plugin.min.js"></script>
+<script src="vendor/countdown/jquery.countdown.min.js"></script>
+<script src="vendor/elevatezoom/jquery.elevatezoom.js"></script> 
+<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> 
+<!-- Magnific Popup core JS file --> 
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> <script src="vendor/countdown/jquery.plugin.min.js"></script> 
+<script src="vendor/countdown/jquery.countdown.min.js"></script> 
+<!-- jQuery form validation -->
+<script src="vendor/form/jquery.form.js"></script>
+<script src="vendor/form/jquery.validate.min.js"></script>
+<!-- Custom -->
+<script src="js/custom.js"></script>
+<script src="js/custom-layout1.js"></script>
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+<script type="text/javascript" src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript">
+
+				jQuery(document).ready(function() {
+
+
+
+					jQuery('.tp-banner').show().revolution(
+					{
+						dottedOverlay:"none",
+						delay:16000,
+						startwidth:1170,
+						startheight:700,
+						hideThumbs:200,
+						hideTimerBar:"on",
+
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:5,
+
+						navigationType:"none",
+						navigationArrows:"",
+						navigationStyle:"",
+
+						touchenabled:"on",
+						onHoverStop:"on",
+
+						swipe_velocity: 0.7,
+						swipe_min_touches: 1,
+						swipe_max_touches: 1,
+						drag_block_vertical: false,
+
+						parallax:"mouse",
+						parallaxBgFreeze:"on",
+						parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+						keyboardNavigation:"off",
+
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:0,
+						navigationVOffset:20,
+
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:20,
+						soloArrowLeftVOffset:0,
+
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:20,
+						soloArrowRightVOffset:0,
+
+						shadow:0,
+						fullWidth:"off",
+						fullScreen:"on",
+
+						spinner:"",
+
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+
+						shuffle:"off",
+
+						autoHeight:"off",
+						forceFullWidth:"off",
+
+
+
+						hideThumbsOnMobile:"off",
+						hideNavDelayOnMobile:1500,
+						hideBulletsOnMobile:"off",
+						hideArrowsOnMobile:"off",
+						hideThumbsUnderResolution:0,
+
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						startWithSlide:0,
+						fullScreenOffsetContainer: ".header"
+					});
+
+
+
+
+				});	//ready
+
+			</script>
+</body>
+
+</html>
