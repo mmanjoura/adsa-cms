@@ -10,8 +10,8 @@ export default () => {
         <Router>
             <Route path="/" component={ Template }>
             	<IndexRoute component={ ProductList }/>
-                <Route path="appcart" component={ Cart }/>
-                <Route path="product" component={ ProductDetail } />
+            	<Route path="product" component={ ProductDetail } />
+                <Route path="appcart" component={ Cart }/> 
             </Route>
 
         </Router>
