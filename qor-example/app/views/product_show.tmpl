@@ -1,7 +1,130 @@
 {{with .Result }}
-  <div class="container">
+  <section class="content">
     {{with .ColorVariation }}
-      <div class="products__details">
+
+    <!-- Content section -->
+   
+      <div class="container">
+        <div class="row product-info-outer">
+          <div class="col-sm-6 hidden-xs">
+                  <div class="row">
+          <div class="column column-8 products__gallery">
+
+            <div class="swiper-container products__gallery--top">
+              <ul class="slides">
+                {{range $image := .Images}}
+                  <li class="product-zoom"  style="background-image:url({{$image.Image}})" data-zoom-image="{{$image.Image}}"></li>
+                    <div class="product-main-image__zoom"></div>
+                {{end}}
+              </ul>
+            </div>
+            
+            <div class="swiper-container products__gallery--thumbs">
+              <ul class="slides">
+                {{range $image := .Images}}
+                  <li style="background-image:url({{$image.Image}})"></li>
+                {{end}}
+              </ul>
+            </div>
+          </div>
+            </div>
+ 
+            <div class="modal fade zoom" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">✕ </button>
+                    <div>
+                      <iframe width="100%" height="350" src=""></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-info col-sm-6">
+            <div class="product-info__title">
+              <h2>{{.Product.Name}}</h2>
+              <div class="rating product-info__rating visible-xs"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></div>
+            </div>
+            <div class="product-info__sku pull-right">SKU: 00065 &nbsp;&nbsp;<span class="label label-success">IN STOCK</span></div>
+            <ul id="singleGallery" class="visible-xs">
+             {{range $image := .Images}}
+                  <li style="background-image:url({{$image.Image}})"></li>
+                {{end}}
+            </ul>
+            <div class="price-box product-info__price"><span class="price-box__new">${{.Product.Price}}</span> <span class="price-box__old">$84.00</span></div>
+            <div class="rating product-info__rating hidden-xs"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></div>
+            <div class="divider divider--xs product-info__divider"></div>
+            {{ t "product.description" }}
+            <div class="product-info__description"> 
+            {{.Product.Description}}
+            </div>
+            <div class="divider divider--xs product-info__divider"></div>
+            <label>{{ t "product.size" }}:</label>
+            <select class="" name="domains">
+                  {{range .SizeVariations}}
+                    <option value="{{.Size.ID}}">{{.Size.Name}}</option>
+                  {{end}}
+            </select>
+            <ul class="options-swatch options-swatch--size options-swatch--lg">
+              <li>XS</li>
+              <li>S</li>
+              <li>M</li>
+              <li>L</li>
+              <li>XL</li>
+              <li>XXL</li>
+              <li>XXXL</li>
+            </ul>
+            <div class="divider divider--xs"></div>
+            <label>{{ t "product.color" }}: <span>{{.Color.Name}}</span></label>
+            <ul class="options-swatch options-swatch--color options-swatch--lg">                  <li><a href="#"><span class="swatch-label"><img src="/images/colors/blue.png" width="10" height="10" alt=""/></span></a></li>
+                  <li><a href="#"><span class="swatch-label"><img src="/images/colors/yellow.png" width="10" height="10" alt=""/></span></a></li>
+                  <li><a href="#"><span class="swatch-label"><img src="/images/colors/green.png" width="10" height="10" alt=""/></span></a></li>
+                  <li><a href="#"><span class="swatch-label"><img src="/images/colors/dark-grey.png" width="10" height="10" alt=""/></span></a></li>
+                  <li><a href="#"><span class="swatch-label"><img src="/images/colors/grey.png" width="10" height="10" alt=""/></span></a></li>
+                  <li><a href="#"><span class="swatch-label"><img src="/images/colors/red.png" width="10" height="10" alt=""/></span></a></li>
+                  <li><a href="#"><span class="swatch-label"><img src="/images/colors/white.png" width="10" height="10" alt=""/></span></a></li>
+</ul>
+            <div class="divider divider--sm"></div>
+            <label>{{ t "product.quantity" }}:</label>
+            <div class="outer">
+              <div class="input-group-qty pull-left"> <span class="pull-left"> </span>
+                <input type="text" name="quant[1]" class="input-number input--wd input-qty pull-left" value="1" min="1" max="100">
+                <span class="pull-left btn-number-container">
+                <button type="button" class="btn btn-number btn-number--plus" data-type="plus" data-field="quant[1]"> + </button>
+                <button type="button" class="btn btn-number btn-number--minus" disabled="disabled" data-type="minus" data-field="quant[1]"> &#8211; </button>
+                </span> </div>
+              <div class="pull-left">
+                <button class="btn btn--wd text-uppercase">Add to Cart</button>
+              </div>
+              <div class="social-links social-links--colorize social-links--invert social-links--padding pull-right">
+                <ul>
+                  <li class="social-links__item"><a class="icon icon-facebook tooltip-link" href="#" data-placement="top" data-toggle="tooltip" data-original-title="Share on facebook"></a></li>
+                  <li class="social-links__item"><a class="icon icon-twitter tooltip-link" href="#" data-placement="top" data-toggle="tooltip" data-original-title="Share on twitter"></a></li>
+                  <li class="social-links__item"><a class="icon icon-google tooltip-link" href="#" data-placement="top" data-toggle="tooltip" data-original-title="Share on google"></a></li>
+                  <li class="social-links__item"><a class="icon icon-pinterest tooltip-link" href="#" data-placement="top" data-toggle="tooltip" data-original-title="Share on pinterest"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="divider divider--xs"></div>
+      
+          </div>
+        </div>
+      </div>
+
+
+   
+
+
+
+
+
+
+
+
+
+      <!-- <div class="products__details">
         <div class="row">
           <div class="column column-8 products__gallery">
 
@@ -70,9 +193,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="row products__info">
+      <!--   <div class="row products__info">
 
           <div class="column column-4">
             <h6>{{ t "product.description" }}</h6>
@@ -97,14 +220,55 @@
               <p>Me non paenitet nullum festiviorem excogitasse ad hoc. Etiam habebis sem dicantur magna mollis euismod.</p>
             </div>
           </div>
+        </div> 
+      </div>-->
+    {{end}}
+
+
+      <section class="content">
+      <div class="container">
+        <h2 class="text-center text-uppercase">{{ t "product.recommendations" }}</h2>
+        <div class="product-category-carousel mobile-special-arrows slick animated-arrows">
+          {{range $product := related_products .ColorVariation}}
+              <div class="product-category hover-squared"> <a href="{{.DefaultPath}}"><img src="/images/category-empty.png" data-lazy="{{.MainImageUrl}}" alt="#"></a>
+              <div class="product-category__hover caption"></div>
+              <div class="product-category__info">
+                <div class="product-category__info__ribbon">
+                  <h5 class="product-category__info__ribbon__title">{{.Name}}</h5>
+                  <div class="product-category__info__ribbon__count"><mark>${{.Price}}</mark></div>
+                </div>
+              </div>
+            </div>
+          {{end}}
+    
         </div>
       </div>
-    {{end}}
+    </section>
+
+      <section class="content">
+      <div class="container">
+        <h2 class="text-center text-uppercase">{{ t "product.also_bought" }}</h2>
+        <div class="product-category-carousel mobile-special-arrows slick animated-arrows">
+        {{range $product := other_also_bought .ColorVariation}}
+              <div class="product-category hover-squared"> <a href="{{.DefaultPath}}"><img src="/images/category-empty.png" data-lazy="{{.MainImageUrl}}" alt="#"></a>
+              <div class="product-category__hover caption"></div>
+              <div class="product-category__info">
+                <div class="product-category__info__ribbon">
+                  <h5 class="product-category__info__ribbon__title">{{.Name}}</h5>
+                  <div class="product-category__info__ribbon__count"><mark>${{.Price}}</mark></div>
+                </div>
+              </div>
+            </div>
+          {{end}}
+    
+        </div>
+        </div>
+      </section>
 
 
 
     <!-- featured product widget -->
-    <div class="row products__featured">
+<!--     <div class="row products__featured">
       <h3>{{ t "product.recommendations" }}</h3>
       <p>{{ t "product.recommendations_note" }}</p>
       <div class="products__featured--slider" id="featured-product">
@@ -118,11 +282,11 @@
           {{end}}
         </ul>
       </div>
-    </div>
+    </div> -->
     <!-- end: featured product widget -->
 
     <!-- featured product widget -->
-    <div class="row products__featured">
+<!--     <div class="row products__featured">
       <h3>{{ t "product.also_bought" }}</h3>
       <p>{{ t "product.also_bought_note" }}</p>
       <div class="products__featured--slider" id="also-bought">
@@ -136,8 +300,8 @@
           {{end}}
         </ul>
       </div>
-    </div>
+    </div> -->
 
     <!-- end: featured product widget -->
-  </div>
+  </section>
 {{end}}

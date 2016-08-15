@@ -1,4 +1,4 @@
-{{with .Result }}
+ <!--{{with .Result }}
   {{.top_banner}}
 
   <div class="container">
@@ -31,5 +31,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> 
+{{end}}-->
+
+{{with .Result }}
+
+      {{.top_banner}} 
+       
+       <h2 class="text-center text-uppercase">Featured Products</h2>
+        <div class="row product-carousel-layout1  mobile-special-arrows product-grid four-in-row  rows-2 animated-arrows products-listing ">
+        
+        {{.feature_products}} 
+
 {{end}}
+

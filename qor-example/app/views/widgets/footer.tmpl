@@ -1,0 +1,131 @@
+  <footer class="footer">
+    <div class="footer__links hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="h-links-list">
+              <ul>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Search Terms</a></li>
+                <li><a href="#">Orders and Returns</a></li>
+                <li><a href="#">Contact Us</a></li>
+             
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="h-links-list text-right">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Customer Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__column-links">
+      <div class="back-to-top"> <a href="#top" class="btn btn--round btn--round--lg"><span class="icon-arrow-up"></span></a></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 hidden-xs hidden-sm"> 
+            <!--  Logo  --> 
+            <a class="logo logo--footer" href="index.html"> <img src="images/swimwear/logo-transparent.png" alt=""/> </a> 
+            <!-- End Logo -->
+            <!-- footer-excerption -->
+            {{ t "layout.about_qor" }}
+            <dl class="footer-excerption">              
+              <dd>This is one of the best, most attractive<br> and smartest templates on the market. </dd>
+              <dt><em>- Adam Smith</em></dt>
+            </dl>
+            <!-- /footer-excerption -->
+          </div>
+          <div class="col-sm-3 col-md-2 mobile-collapse">
+            <h5 class="title text-uppercase mobile-collapse__title">Information </h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Notice</a></li>
+                <li><a href="#">Conditions of Use</a></li>              
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-2 mobile-collapse">
+            <h5 class="title text-uppercase mobile-collapse__title">Service</h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li><a href="#">Online support</a></li>
+                <li><a href="#">Help & FAQs</a></li>
+                <li><a href="#">Call Center</a></li>   
+              </ul>
+            </div>
+          </div>
+               <div class="footer__change-language">
+                <select>
+                  <option {{ if (eq .Result.CurrentLocale "en-US") }}selected{{end}} value="/switch_locale?locale=en-US">English</option>
+                  <option {{ if (eq .Result.CurrentLocale "zh-CN") }}selected{{end}} value="/switch_locale?locale=zh-CN">简体中文</option>
+                </select>
+              </div>
+          <div class="col-sm-3 col-md-2 mobile-collapse">
+            <h5 class="title text-uppercase mobile-collapse__title">{{ t "layout.support_and_info" }}</h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li><a href="#">{{ t "layout.footer_link.faq" }}</a></li>
+                <li><a href="#">{{ t "layout.footer_link.size_guide" }}</a></li>
+                <li><a href="#">{{ t "layout.footer_link.shipping" }}</a></li>
+                <li><a href="#">{{ t "layout.footer_link.privacy_policy" }}</a></li>
+                <li><a href="#">{{ t "layout.footer_link.terms_of_use" }}</a></li>
+                <li><a href="#">{{ t "layout.footer_link.press" }}</a></li>
+                <li><a href="#">{{ t "layout.footer_link.about_us" }}</a></li>
+                <li><a href="#">{{ t "layout.footer_link.blog" }}</a></li>               
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3 mobile-collapse mobile-collapse--last">
+            <h5 class="title text-uppercase mobile-collapse__title">Company Info</h5>
+            <div class="v-links-list mobile-collapse__content">
+              <ul>
+                <li class="icon icon-home">7563 St. Vincent Place, Glasgow</li>
+                <li class="icon icon-telephone">321321321, 321321321</li>
+                <li class="icon icon-mail"><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+                <li class="icon icon-skype"><a href="#">shop.test</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__subscribe">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 col-md-6">
+            <form id="subscribe-form" class="subscribe-form" action="#" method="post">
+              <label class="subscribe-form__label text-uppercase pull-left">Subscribe</label>
+              <input type="text" class="subscribe-form__input input--wd" placeholder="Your e-mail address">
+              <button class="btn btn--wd text-uppercase wave"><span class="hidden-xs">Subscribe</span><span class="icon icon-mail-fill visible-xs"></span></button>
+            </form>
+          </div>
+          <div class="col-sm-5 col-md-6">{{ t "layout.connect" }}
+            <div class="social-links social-links--colorize social-links--large">
+              <ul>
+                <li class="social-links__item"><a class="icon icon-facebook" href="http://www.facebook.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-twitter" href="http://www.twitter.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-google" href="http://www.google.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-linkedin" href="http://www.linkedin.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-pinterest" href="http://www.pinterest.com/"></a></li>
+                <li class="social-links__item"><a class="icon icon-mail" href="mailto:mail@google.com"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="pull-left text-uppercase">© 2016 <a href="#">ADSA Ltd</a>. All Rights Reserved. </div>
+        
+      </div>
+    </div>
+  </footer>ß

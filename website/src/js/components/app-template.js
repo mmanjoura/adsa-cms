@@ -10,9 +10,8 @@ export default ( props ) => {
         <div className="wrapper">
             <Header />
             <div id="pageContent" className="page-content">
-                <Slider /> 
+                <Slider  /> 
 	            { props.children }
-	            
 	         </div>
             <Footer />
         </div>
